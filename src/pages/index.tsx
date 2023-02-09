@@ -1,5 +1,5 @@
-function Home(): JSX.Element {
-  return <div className="font-bold">Hello Next.js!</div>;
-}
+import { FC } from 'react';
 
-export default Home;
+export const Home: FC = () => {
+  return <div className="font-bold">Hello Next.js!</div>;
+};
