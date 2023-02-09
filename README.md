@@ -1,3 +1,7 @@
+## 当たり前
+
+このリポジトリは、宮崎ゼミ 26 期で、「それって当たり前ですか？」というテーマで作成したものです。
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
