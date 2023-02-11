@@ -9,4 +9,4 @@ const SpecificSettingPage = () => {
   );
 };
 
-export default SpecificSetting;
+export default SpecificSettingPage;

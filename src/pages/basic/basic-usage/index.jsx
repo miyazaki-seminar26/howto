@@ -9,4 +9,4 @@ const BasicUsagePage = () => {
   );
 };
 
-export default BasicUsage;
+export default BasicUsagePage;
