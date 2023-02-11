@@ -85,7 +85,7 @@ export const AppHeader = () => {
   });
 
   return (
-    <header>
+    <header className>
       <div className={classes.inner}>
         <Link href="/">
           <Image src="/top/logo.svg" alt="logo" width={150} />
