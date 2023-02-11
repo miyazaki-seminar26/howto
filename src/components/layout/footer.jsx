@@ -2,7 +2,8 @@ import { Anchor, Flex, Text } from '@mantine/core';
 
 import { LINKS } from '@/constants/link';
 
-import { InstagramIcon } from '../icons/Instagram';
+import { GithubIcon } from '../icons/GithubIcon';
+import { InstagramIcon } from '../icons/InstagramIcon';
 import { TwitterIcon } from '../icons/TwitterIcon';
 
 export const AppFooter = () => {
@@ -19,6 +20,14 @@ export const AppFooter = () => {
         </Anchor>
         <Anchor className="transition-opacity hover:opacity-80">
           <TwitterIcon />
+        </Anchor>
+        <Anchor
+          className="transition-opacity hover:opacity-80"
+          href={LINKS.GITHUB}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <GithubIcon />
         </Anchor>
         <Text color="white" size="xs" className="flex items-center">
           ©️miyazaki-seminar 2023

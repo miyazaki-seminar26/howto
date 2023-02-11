@@ -12,4 +12,6 @@ export const LINKS = {
   // advanced
   INFRA: '/advanced/infra',
   SITE_MANAGEMENT: '/advanced/site-management',
+  // other
+  GITHUB: 'https://github.com/miyazaki-seminar26',
 };
