@@ -1,4 +1,4 @@
-export const LINKS = {
+export const PATHS = {
   HOME: '/',
   // basic
   PROJECT_PLAN: '/basic/project-plan',

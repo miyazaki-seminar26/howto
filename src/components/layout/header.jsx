@@ -1,65 +1,97 @@
-import { Anchor, Flex, Image, Tabs } from '@mantine/core';
-// import { IconMessageCircle, IconPhoto } from '@tabler/icons';
-import { useRouter } from 'next/router';
+import { Center, createStyles, Group, Image, Menu } from '@mantine/core';
+import { IconChevronDown } from '@tabler/icons-react';
+import Link from 'next/link';
 
-import { LINKS } from '@/constants/link';
+import { PATHS } from '@/constants/link';
 
-const MENU = [
+const links = [
   {
     label: '基礎編',
-    href: LINKS.HOME,
+    links: [
+      { label: 'プロジェクト企画', link: PATHS.PROJECT_PLAN },
+      { label: 'Service 2', link: '/services/2' },
+      { label: 'Service 3', link: '/services/3' },
+    ],
   },
   {
     label: '応用編',
-    href: LINKS.PROJECT_PLAN,
+    links: [
+      { label: '実践①', link: PATHS.PRACTICE1 },
+      { label: 'Service 2', link: '/services/2' },
+      { label: 'Service 3', link: '/services/3' },
+    ],
   },
 ];
 
-const AppLink = ({ path, label }) => {
-  const pathname = useRouter().pathname;
-  return (
-    <Anchor
-      variant="text"
-      href={path}
-      color="dark"
-      className={`transition-all hover:opacity-80 ${
-        pathname === path && 'font-bold underline'
-      }`}
-    >
-      {label}
-    </Anchor>
-  );
-};
+const useStyles = createStyles(theme => ({
+  inner: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: '15px 50px',
+    [theme.fn.smallerThan('sm')]: {
+      flexDirection: 'column',
+    },
+  },
+
+  link: {
+    display: 'block',
+    lineHeight: 1,
+    padding: '8px 12px',
+    borderRadius: theme.radius.sm,
+    textDecoration: 'none',
+  },
+
+  linkLabel: {
+    marginRight: 5,
+    fontSize: 13,
+    [theme.fn.smallerThan('sm')]: {
+      fontSize: 11,
+    },
+  },
+
+  dropdown: {
+    marginTop: 10,
+    padding: 8,
+    fontSize: 13,
+  },
+}));
 
 export const AppHeader = () => {
+  const { classes } = useStyles();
+
+  const items = links.map(link => {
+    const menuItems = link.links?.map(item => (
+      <Menu.Item key={item.link}>
+        <Link href={item.link}>{item.label}</Link>
+      </Menu.Item>
+    ));
+
+    return (
+      <Menu key={link.label} trigger="hover" exitTransitionDuration={0}>
+        <Menu.Target>
+          <div className={classes.link}>
+            <Center>
+              <span className={classes.linkLabel}>{link.label}</span>
+              <IconChevronDown size={12} stroke={1.5} />
+            </Center>
+          </div>
+        </Menu.Target>
+        <Menu.Dropdown className={classes.dropdown}>{menuItems}</Menu.Dropdown>
+      </Menu>
+    );
+  });
+
   return (
     <header>
-      <Flex>
-        <Image src="/top/icon.svg" alt="icon" />
-        <Tabs defaultValue="basic">
-          <Tabs.List>
-            <Tabs.Tab value="basic">基礎編</Tabs.Tab>
-            <Tabs.Tab value="advanced">応用編</Tabs.Tab>
-          </Tabs.List>
-
-          <Tabs.Panel value="basic" pt="xs">
-            Gallery tab content
-          </Tabs.Panel>
-
-          <Tabs.Panel value="advanced" pt="xs">
-            Messages tab content
-          </Tabs.Panel>
-        </Tabs>
-        {/* <nav>
-          <ul className="flex gap-4 text-[15px] md:gap-8 md:text-xl">
-            {MENU.map(item => (
-              <li key={item.label}>
-                <AppLink path={item.href} label={item.label} />
-              </li>
-            ))}
-          </ul>
-        </nav> */}
-      </Flex>
+      <div className={classes.inner}>
+        <Link href="/">
+          <Image src="/top/logo.svg" alt="logo" width={150} />
+        </Link>
+        <Group spacing={5} className={classes.links}>
+          {items}
+        </Group>
+      </div>
     </header>
   );
 };

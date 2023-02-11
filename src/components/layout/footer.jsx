@@ -1,6 +1,6 @@
 import { Anchor, Flex, Text } from '@mantine/core';
 
-import { LINKS } from '@/constants/link';
+import { PATHS } from '@/constants/link';
 
 import { GithubIcon } from '../icons/GithubIcon';
 import { InstagramIcon } from '../icons/InstagramIcon';
@@ -12,7 +12,6 @@ export const AppFooter = () => {
       <Flex gap={24}>
         <Anchor
           className="transition-opacity hover:opacity-80"
-          href={LINKS.INSTAGRAM}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -23,7 +22,7 @@ export const AppFooter = () => {
         </Anchor>
         <Anchor
           className="transition-opacity hover:opacity-80"
-          href={LINKS.GITHUB}
+          href={PATHS.GITHUB}
           target="_blank"
           rel="noopener noreferrer"
         >
