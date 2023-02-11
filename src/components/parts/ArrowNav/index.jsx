@@ -8,15 +8,42 @@ export const ArrowNav = ({ previousPage, nextPage }) => {
     <div>
       <img src="/prefooter/line.svg" />
       <Space h="xl" />
-      <Flex className="justify-between" align="flex-end">
-        <div>
-          <Link href={previousPage.path}>{previousPage.name}</Link>
-          <img src="/prefooter/left.svg" />
+      <Flex
+        mih={50}
+        bg="rgba(0, 0, 0, 0)"
+        gap="lg"
+        justify="center"
+        align="flex-end"
+        direction="row"
+        wrap="wrap"
+      >
+        <div className="flex flex-col items-center">
+          <Link href={previousPage.path}>
+            <img
+              src="/prefooter/left.svg"
+              alt="前のページに戻るよ"
+              width="50"
+              height="50"
+            />
+          </Link>
         </div>
-        <img src="/prefooter/house.svg" />
-        <div>
-          <Link href={nextPage.path}>{nextPage.name}</Link>
-          <img src="/prefooter/right.svg" />
+        <Space w="xl" />
+        <img
+          src="/prefooter/house.svg"
+          alt="このページのことだよ"
+          width="70"
+          height="70"
+        />
+        <Space w="lg" />
+        <div className="flex flex-col items-center">
+          <Link href={nextPage.path}>
+            <img
+              src="/prefooter/right.svg"
+              alt="次のページに移動するよ"
+              width="50"
+              height="50"
+            />
+          </Link>
         </div>
       </Flex>
     </div>
