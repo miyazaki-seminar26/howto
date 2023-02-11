@@ -1,3 +1,5 @@
+import { ArrowNav } from '@/components/parts/ArrowNav';
+import { PATHS } from '@/constants/link';
 import { Center, Flex, Space, Text, Title } from '@mantine/core';
 
 export const Home = () => {
