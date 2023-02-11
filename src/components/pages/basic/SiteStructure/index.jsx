@@ -1,10 +1,15 @@
-import { PageHeader } from '@/components/parts/PageHeader';
-import { PATHS } from '@/constants/link';
+import { useState } from 'react';
 
 export const SiteStructure = () => {
+  const [state, setState] = useState(0);
+
+  const handleClick = () => {
+    setState(state + 1);
+  };
   return (
     <div>
-      <PageHeader pageTitle={PATHS.SITE_STRUCTURE.name} />
+      <button onClick={handleClick}>click</button>
+      <div>{state}</div>
     </div>
   );
 };
