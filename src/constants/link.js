@@ -4,12 +4,12 @@ export const LINKS = {
   PROJECT_PLAN: '/basic/project-plan',
   SITE_STRUCTURE: '/basic/site-structure',
   DESIGN: '/basic/design',
-  SPECIFICSETTING: '/basic/specific-setting',
-  BASICUSAGE: '/basic/basic-usage',
-  PRACTICE1: '/basic/practice1',
-  PRACTICE2: '/basic/practice2',
-  PRACTICE3: '/basic/practice3',
+  SPECIFIC_SETTING: '/basic/specific-setting',
+  BASIC_USAGE: '/basic/basic-usage',
   // advanced
+  PRACTICE1: '/advanced/practice1',
+  PRACTICE2: '/advanced/practice2',
+  PRACTICE3: '/advanced/practice3',
   INFRA: '/advanced/infra',
   SITE_MANAGEMENT: '/advanced/site-management',
   // other
