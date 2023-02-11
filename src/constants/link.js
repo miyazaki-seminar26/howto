@@ -1,17 +1,17 @@
 export const PATHS = {
-  HOME: '/',
+  HOME: { name: 'トップページ', path: '/' },
   // basic
-  PROJECT_PLAN: '/basic/project-plan',
-  SITE_STRUCTURE: '/basic/site-structure',
-  DESIGN: '/basic/design',
-  SPECIFIC_SETTING: '/basic/specific-setting',
-  BASIC_USAGE: '/basic/basic-usage',
+  PROJECT_PLAN: { name: 'プロジェクト計画', path: '/basic/project-plan' },
+  SITE_STRUCTURE: { name: 'サイト構造', path: '/basic/site-structure' },
+  DESIGN: { name: 'デザイン', path: '/basic/design' },
+  SPECIFIC_SETTING: { name: '特定の設定', path: '/basic/specific-setting' },
+  BASIC_USAGE: { name: '基本的な使い方', path: '/basic/basic-usage' },
   // advanced
-  PRACTICE1: '/advanced/practice1',
-  PRACTICE2: '/advanced/practice2',
-  PRACTICE3: '/advanced/practice3',
-  INFRA: '/advanced/infra',
-  SITE_MANAGEMENT: '/advanced/site-management',
+  PRACTICE1: { name: '実践1', path: '/advanced/practice1' },
+  PRACTICE2: { name: '実践2', path: '/advanced/practice2' },
+  PRACTICE3: { name: '実践3', path: '/advanced/practice3' },
+  INFRA: { name: 'インフラ', path: '/advanced/infra' },
+  SITE_MANAGEMENT: { name: 'サイト管理', path: '/advanced/site-management' },
   // other
-  GITHUB: 'https://github.com/miyazaki-seminar26',
+  GITHUB: { name: 'GitHub', path: 'https://github.com/miyazaki-seminar26' },
 };

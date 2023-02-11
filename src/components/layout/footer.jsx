@@ -22,7 +22,7 @@ export const AppFooter = () => {
         </Anchor>
         <Anchor
           className="transition-opacity hover:opacity-80"
-          href={PATHS.GITHUB}
+          href={PATHS.GITHUB.path}
           target="_blank"
           rel="noopener noreferrer"
         >

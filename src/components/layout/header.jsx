@@ -8,7 +8,7 @@ const links = [
   {
     label: '基礎編',
     links: [
-      { label: 'プロジェクト企画', link: PATHS.PROJECT_PLAN },
+      { label: PATHS.PROJECT_PLAN.name, link: PATHS.PROJECT_PLAN.path },
       { label: 'Service 2', link: '/services/2' },
       { label: 'Service 3', link: '/services/3' },
     ],
@@ -16,7 +16,7 @@ const links = [
   {
     label: '応用編',
     links: [
-      { label: '実践①', link: PATHS.PRACTICE1 },
+      { label: PATHS.PRACTICE1.name, link: PATHS.PRACTICE1.path },
       { label: 'Service 2', link: '/services/2' },
       { label: 'Service 3', link: '/services/3' },
     ],
