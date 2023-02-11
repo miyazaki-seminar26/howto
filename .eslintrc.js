@@ -3,13 +3,10 @@ module.exports = {
   plugins: ['tailwindcss', '@typescript-eslint', 'import'],
   extends: [
     'next/core-web-vitals',
-    'airbnb',
-    'airbnb/hooks',
     'plugin:tailwindcss/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:import/recommended',
     'plugin:import/typescript',
-    'plugin:prettier/recommended',
   ],
   plugins: ['tailwindcss'],
   rules: {
