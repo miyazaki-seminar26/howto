@@ -3,7 +3,7 @@ import { Home } from '@/components/pages/Home';
 
 const HomePage = () => {
   return (
-    <AppLayout>
+    <AppLayout pageName="HOME">
       <Home />
     </AppLayout>
   );
