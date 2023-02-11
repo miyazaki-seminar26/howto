@@ -1,4 +1,4 @@
-import { Box, Container, Flex } from '@mantine/core';
+import { Box, Container, Flex, Image } from '@mantine/core';
 
 import { AppFooter } from './footer';
 import { AppHeader } from './header';
@@ -6,15 +6,16 @@ import { AppHeader } from './header';
 export const AppLayout = ({ children, pageName }) => {
   return (
     <Box className="h-screen">
-      <Flex className="absolute top-0 w-full justify-between">
+      <Flex className="w-full justify-between">
         <Container mt="md" mx={{ md: '10%', xs: 0 }} className="sticky right-0">
           <AppHeader />
         </Container>
-
-        {pageName !== 'HOME' && (
-          <div className="absolute right-12 top-12 w-[36vw]">画像</div>
-        )}
       </Flex>
+      {pageName === 'HOME' && (
+        <div className="w-full">
+          <Image src="/top/main.svg" alt="main-header-image" />
+        </div>
+      )}
 
       <main>
         <Container mt={84} mx={{ md: 'auto', xs: 0 }}>

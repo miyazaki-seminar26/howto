@@ -9,16 +9,8 @@ const MENU = [
     href: LINKS.HOME,
   },
   {
-    label: 'PROJECT',
-    href: LINKS.PROJECT,
-  },
-  {
-    label: 'ABOUT US',
-    href: LINKS.ABOUTUS,
-  },
-  {
-    label: 'FAQ',
-    href: LINKS.FAQ,
+    label: 'PROJECT_PLAN',
+    href: LINKS.PROJECT_PLAN,
   },
 ];
 

@@ -3,7 +3,7 @@ import { ProjectPlan } from '@/components/pages/basic/ProjectPlan';
 
 const ProjectPlanPage = () => {
   return (
-    <AppLayout>
+    <AppLayout pageName="PROJECT_PLAN">
       <ProjectPlan />
     </AppLayout>
   );

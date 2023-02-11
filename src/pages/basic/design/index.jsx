@@ -3,7 +3,7 @@ import { Design } from '@/components/pages/basic/Design';
 
 const DesignPage = () => {
   return (
-    <AppLayout>
+    <AppLayout pageName="DESIGN">
       <Design />
     </AppLayout>
   );

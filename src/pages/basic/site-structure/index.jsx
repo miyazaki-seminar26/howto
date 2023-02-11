@@ -3,7 +3,7 @@ import { SiteStructure } from '@/components/pages/basic/SiteStructure';
 
 const SiteStructurePage = () => {
   return (
-    <AppLayout>
+    <AppLayout pageName="SITE_STRUCTURE">
       <SiteStructure />
     </AppLayout>
   );
