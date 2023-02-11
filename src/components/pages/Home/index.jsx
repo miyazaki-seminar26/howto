@@ -1,5 +1,8 @@
 import { Center, Flex, Space, Text, Title } from '@mantine/core';
 
+import { ArrowNav } from '@/components/parts/ArrowNav';
+import { PATHS } from '@/constants/link';
+
 export const Home = () => {
   return (
     <div>
@@ -58,6 +61,7 @@ export const Home = () => {
           </Text>
         </Center>
       </Flex>
+      <ArrowNav nextPage={PATHS.PROJECT_PLAN} />
     </div>
   );
 };

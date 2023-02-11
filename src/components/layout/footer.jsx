@@ -8,7 +8,7 @@ import { TwitterIcon } from '../icons/TwitterIcon';
 
 export const AppFooter = () => {
   return (
-    <footer className="flex  py-4">
+    <footer className="mt-10  flex py-4">
       <Flex gap={24}>
         <Anchor
           className="transition-opacity hover:opacity-80"

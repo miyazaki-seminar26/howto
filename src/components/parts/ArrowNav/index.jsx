@@ -6,7 +6,7 @@ export const ArrowNav = ({ previousPage, nextPage }) => {
   // tailwindを使う
   return (
     <div>
-      <img src="/prefooter/line.svg" />
+      <img src="/prefooter/line.svg" alt="line" />
       <Space h="xl" />
       <Flex
         mih={50}
@@ -17,16 +17,18 @@ export const ArrowNav = ({ previousPage, nextPage }) => {
         direction="row"
         wrap="wrap"
       >
-        <div className="flex flex-col items-center">
-          <Link href={previousPage.path}>
-            <img
-              src="/prefooter/left.svg"
-              alt="前のページに戻るよ"
-              width="40"
-              height="40"
-            />
-          </Link>
-        </div>
+        {previousPage && (
+          <div className="flex flex-col items-center">
+            <Link href={previousPage.path}>
+              <img
+                src="/prefooter/left.svg"
+                alt="前のページに戻るよ"
+                width="40"
+                height="40"
+              />
+            </Link>
+          </div>
+        )}
         <Space w="xl" />
         <img
           src="/prefooter/house.svg"
