@@ -1,8 +1,4 @@
 import { Center, Flex, Space, Text, Title } from '@mantine/core';
-import { IconArrowBadgeRight } from '@tabler/icons-react';
-import Link from 'next/link';
-
-import { PATHS } from '@/constants/link';
 
 export const Home = () => {
   return (
@@ -41,20 +37,7 @@ export const Home = () => {
             <br></br>
             まだ自分の「作りたい」がぼやけているならここから一緒に見つけにいきましょう！
           </Text>
-          <div>
-            <Center>
-              <Link href={PATHS.PROJECT_PLAN.path}>
-                <Text fz="xs" c="dimmed">
-                  プロジェクト設計へ
-                </Text>
-              </Link>
-              <IconArrowBadgeRight
-                size={50}
-                strokeWidth={1.5}
-                color={'black'}
-              />
-            </Center>
-          </div>
+          <div></div>
         </Center>
       </Flex>
       <Flex
