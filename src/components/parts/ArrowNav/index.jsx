@@ -22,8 +22,8 @@ export const ArrowNav = ({ previousPage, nextPage }) => {
             <img
               src="/prefooter/left.svg"
               alt="前のページに戻るよ"
-              width="50"
-              height="50"
+              width="40"
+              height="40"
             />
           </Link>
         </div>
@@ -31,8 +31,8 @@ export const ArrowNav = ({ previousPage, nextPage }) => {
         <img
           src="/prefooter/house.svg"
           alt="このページのことだよ"
-          width="70"
-          height="70"
+          width="40"
+          height="40"
         />
         <Space w="lg" />
         <div className="flex flex-col items-center">
@@ -40,8 +40,8 @@ export const ArrowNav = ({ previousPage, nextPage }) => {
             <img
               src="/prefooter/right.svg"
               alt="次のページに移動するよ"
-              width="50"
-              height="50"
+              width="40"
+              height="40"
             />
           </Link>
         </div>
