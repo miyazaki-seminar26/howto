@@ -11,12 +11,9 @@ class MyDocument extends Document {
       <Html lang="ja">
         <title>Howto</title>
         <Head>
-          <meta property="og:title" content="Howto" />
+          <meta property="og:title" content="How to Web-26th" />
           <meta property="og:image" content="/favicons/favicon-16x16.png" />
-          <meta
-            property="og:description"
-            content="How-toのサイトです。"
-          />
+          <meta property="og:description" content="How-toのサイトです。" />
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="theme-color" content="#ffffff" />
           <link
