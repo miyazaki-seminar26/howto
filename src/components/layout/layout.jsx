@@ -16,7 +16,7 @@ export const AppLayout = ({ children, pageName }) => {
             gradient={{ from: '#ed6ea0', to: '#ec8c69', deg: 35 }}
             radius="xl"
             size="lg"
-            className="absolute top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            className="absolute top-2/3 left-1/2 h-14 w-44 -translate-x-1/2 -translate-y-1/2 text-sm sm:w-96 sm:text-3xl"
           >
             <Link href="/survey">テストを受ける→</Link>
           </Button>
