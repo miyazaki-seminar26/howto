@@ -1,5 +1,11 @@
 import { useEffect, useReducer, useState } from 'react';
 
+import { Flex, Text } from '@mantine/core';
+
+import Link from 'next/link';
+
+import { IconArrowNarrowRight } from '@tabler/icons-react';
+
 import { ArrowNav } from '@/components/parts/ArrowNav';
 import { PageHeader } from '@/components/parts/PageHeader';
 import { PAGES } from '@/constants/link';
@@ -45,39 +51,80 @@ export const Survey = () => {
       </div>
       {questionList.map((question, index) => (
         <div className="my-10 flex justify-between" key={index}>
-          <div>
+          <Text fz="sm" fw={700} className="m-5 flex">
             Q.
             {question.text}
-          </div>
+          </Text>
           {state[question.name] ? (
             <div>
-              <button
-                onClick={() => handleClick(question.name)}
-                className="bg-slate-500"
+              <Flex
+                mih={50}
+                bg="rgba(0, 0, 0, 0)"
+                gap="xl"
+                justify="flex-end"
+                align="center"
+                direction="row"
+                wrap="wrap"
               >
-                YES
-              </button>
-              <button onClick={() => handleClick(question.name)}>NO</button>
+                <button onClick={() => handleClick(question.name)}>
+                  <img
+                    src="/yesorno/yes1.svg"
+                    alt="YES"
+                    width="50"
+                    height="50"
+                  />
+                </button>
+                <button onClick={() => handleClick(question.name)}>
+                  <img src="/yesorno/no2.svg" alt="NO" width="85" height="85" />
+                </button>
+              </Flex>
             </div>
           ) : (
             <div>
-              <button onClick={() => handleClick(question.name)}>YES</button>
-              <button
-                onClick={() => handleClick(question.name)}
-                className="bg-slate-500"
+              <Flex
+                mih={50}
+                bg="rgba(0, 0, 0, 0)"
+                gap="xl"
+                justify="flex-end"
+                align="center"
+                direction="row"
+                wrap="wrap"
               >
-                NO
-              </button>
+                <button onClick={() => handleClick(question.name)}>
+                  <img
+                    src="/yesorno/yes2.svg"
+                    alt="YES"
+                    width="50"
+                    height="50"
+                  />
+                </button>
+                <button onClick={() => handleClick(question.name)}>
+                  <img src="/yesorno/no1.svg" alt="NO" width="85" height="85" />
+                </button>
+              </Flex>
             </div>
           )}
         </div>
       ))}
 
-      <div className="mx-32 flex items-center justify-center border px-5 py-7 font-bold shadow-md">
+      <div className="mx-32 my-5 flex items-center justify-center border px-5 py-7 font-bold shadow-md">
         <CopilotIcon />
         <div>あなたの点数は{result}点です</div>
         <CopilotIcon />
       </div>
+
+      <Link href="#">
+        <div className="flex items-center justify-center hover:text-blue-500">
+          <IconArrowNarrowRight size={40} strokeWidth={0.5} color={'black'} />
+          x点以上の方はこちら
+        </div>
+      </Link>
+      <Link href="#">
+        <div className="flex items-center justify-center hover:text-blue-500">
+          <IconArrowNarrowRight size={40} strokeWidth={0.5} color={'black'} />
+          x点以下の方はこちら
+        </div>
+      </Link>
 
       <ArrowNav previousPage={previousPage} />
     </div>

@@ -10,13 +10,13 @@ export const AppLayout = ({ children, pageName }) => {
       <AppHeader />
       {pageName === 'HOME' && (
         <div className="relative w-full">
-          <Image src="/top/top-main.svg" alt="main-header-image" fit="cover" />
+          <Image src="/top/main-bg.svg" alt="main-header-image" fit="cover" />
           <Button
             variant="gradient"
             gradient={{ from: '#ed6ea0', to: '#ec8c69', deg: 35 }}
             radius="xl"
             size="lg"
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            className="absolute top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2"
           >
             <Link href="/survey">テストを受ける→</Link>
           </Button>
