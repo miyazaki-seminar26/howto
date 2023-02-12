@@ -26,8 +26,8 @@ export const Survey = () => {
   const { reducer, initialState } = useSurvey();
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const handleClick = () => {
-    dispatch({ type: 'FIRST' });
+  const handleClick = num => {
+    dispatch({ type: num });
   };
 
   return (
@@ -35,42 +35,34 @@ export const Survey = () => {
       <PageHeader pageTitle={currentPage.name} />
       {questionList.map((question, index) => (
         <div className="my-10 flex justify-between" key={index}>
-          <div className="bg-blue-300">{question.text}</div>
+          <div className="bg-blue-300">
+            {question.index}
+            {question.text}
+          </div>
           {state[question.name] ? (
             <div>
-              <button onClick={handleClick} className="bg-slate-500">
+              <button
+                onClick={() => handleClick(question.name)}
+                className="bg-slate-500"
+              >
                 YES
               </button>
-              <button onClick={handleClick}>NO</button>
+              <button onClick={() => handleClick(question.name)}>NO</button>
             </div>
           ) : (
             <div>
-              <button onClick={handleClick}>YES</button>
-              <button onClick={handleClick} className="bg-slate-500">
+              <button onClick={() => handleClick(question.name)}>YES</button>
+              <button
+                onClick={() => handleClick(question.name)}
+                className="bg-slate-500"
+              >
                 NO
               </button>
             </div>
           )}
         </div>
       ))}
-      <div className="my-10 flex justify-between">
-        <div className="bg-blue-300">あなたが落としたのは金の斧ですか？</div>
-        {state.FIRST ? (
-          <div>
-            <button onClick={handleClick} className="bg-slate-500">
-              YES
-            </button>
-            <button onClick={handleClick}>NO</button>
-          </div>
-        ) : (
-          <div>
-            <button onClick={handleClick}>YES</button>
-            <button onClick={handleClick} className="bg-slate-500">
-              NO
-            </button>
-          </div>
-        )}
-      </div>
+
       <ArrowNav previousPage={previousPage} />
     </div>
   );
