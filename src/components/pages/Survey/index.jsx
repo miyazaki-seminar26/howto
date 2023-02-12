@@ -32,11 +32,12 @@ export const Survey = () => {
   useEffect(() => {
     // objectであるstateのvalueを配列に変換
     const stateArray = Object.values(state);
-    // stateArrayがtrueの場合、scoresのindexを取得し、その値をresultに加算
     const temp = 0;
     stateArray.forEach((value, index) => {
       if (value) {
-        temp = temp + scores[index];
+        temp = temp + scores[index].yes;
+      } else {
+        temp = temp + scores[index].no;
       }
     });
     setResult(temp);
