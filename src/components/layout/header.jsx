@@ -1,5 +1,5 @@
 import { Center, createStyles, Group, Image, Menu } from '@mantine/core';
-import { IconChevronDown } from '@tabler/icons-react';
+import { IconChevronDown, IconGitBranch } from '@tabler/icons-react';
 import Link from 'next/link';
 
 import { PAGES } from '@/constants/link';
@@ -52,6 +52,7 @@ const useStyles = createStyles(theme => ({
     marginTop: 10,
     padding: 8,
     fontSize: 13,
+    boxShadow: '10px 10px 4px #ccc',
   },
 }));
 
@@ -60,7 +61,13 @@ export const AppHeader = () => {
 
   const items = links.map(link => {
     const menuItems = link.links?.map(item => (
-      <Menu.Item key={item.link}>
+      <Menu.Item key={item.link} className="flex items-center">
+        <IconGitBranch
+          size={20}
+          strokeWidth={1.5}
+          color={'#000000'}
+          className="mr-3 inline"
+        />
         <Link href={item.link}>{item.label}</Link>
       </Menu.Item>
     ));
