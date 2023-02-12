@@ -4,7 +4,7 @@ import { Flex, Text } from '@mantine/core';
 
 import Link from 'next/link';
 
-import { IconArrowNarrowRight } from '@tabler/icons-react';
+import { IconSquareArrowRight } from '@tabler/icons-react';
 
 import { ArrowNav } from '@/components/parts/ArrowNav';
 import { PageHeader } from '@/components/parts/PageHeader';
@@ -50,7 +50,10 @@ export const Survey = () => {
         簡単なアンケートに答えてください！YESかNOのボタンを押すだけです。
       </div>
       {questionList.map((question, index) => (
-        <div className="my-10 flex flex-col justify-between sm:flex-row" key={index}>
+        <div
+          className="my-10 flex flex-col justify-between sm:flex-row"
+          key={index}
+        >
           <Text fz="sm" fw={700} className="m-5 flex">
             Q.
             {question.text}
@@ -114,15 +117,15 @@ export const Survey = () => {
       </div>
 
       <Link href="#">
-        <div className="flex items-center justify-center hover:text-blue-500">
-          <IconArrowNarrowRight size={40} strokeWidth={0.5} color={'black'} />
+        <div className="mb-2 flex cursor-pointer items-center justify-center font-semibold transition-all duration-300 hover:text-blue-600">
+          <IconSquareArrowRight size={40} strokeWidth={1} color={'black'} />
           x点以上の方はこちら
         </div>
       </Link>
       <Link href="#">
-        <div className="flex items-center justify-center hover:text-blue-500">
-          <IconArrowNarrowRight size={40} strokeWidth={0.5} color={'black'} />
-          x点以下の方はこちら
+        <div className="flex cursor-pointer items-center justify-center font-semibold transition-all duration-300 hover:text-blue-600">
+          <IconSquareArrowRight size={40} strokeWidth={1} color={'black'} />
+          x点以上の方はこちら
         </div>
       </Link>
 

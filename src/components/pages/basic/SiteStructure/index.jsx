@@ -22,13 +22,13 @@ export const SiteStructure = () => {
       <button onClick={handleClick}>click</button>
       <div>クリック数{state}</div>
       <Link href="#">
-        <div className="font-semibold flex items-center justify-center hover:text-blue-600 cursor-pointer transition-all duration-300 mb-2">
+        <div className="mb-2 flex cursor-pointer items-center justify-center font-semibold transition-all duration-300 hover:text-blue-600">
           <IconSquareArrowRight size={40} strokeWidth={1} color={'black'} />
           x点以上の方はこちら
         </div>
       </Link>
       <Link href="#">
-        <div className="font-semibold flex items-center justify-center hover:text-blue-600 cursor-pointer transition-all duration-300">
+        <div className="flex cursor-pointer items-center justify-center font-semibold transition-all duration-300 hover:text-blue-600">
           <IconSquareArrowRight size={40} strokeWidth={1} color={'black'} />
           x点以上の方はこちら
         </div>
