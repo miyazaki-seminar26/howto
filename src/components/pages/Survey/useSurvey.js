@@ -56,16 +56,16 @@ export const useSurvey = () => {
   ];
 
   const scores = [
-    2, // Q1
-    3, // Q2
-    2, // Q3
-    3, // Q4
-    4, // Q5
-    3, // Q6
-    2, // Q7
-    3, // Q8
-    4, // Q9
-    3, // Q10
+    { yes: 5, no: 0 }, // Q1
+    { yes: 5, no: -6 }, // Q2
+    { yes: -10, no: 4 }, // Q3
+    { yes: 5, no: -6 }, // Q4
+    { yes: 15, no: -6 }, // Q5
+    { yes: 5, no: -1 }, // Q6
+    { yes: 18, no: -6 }, // Q7
+    { yes: 5, no: -6 }, // Q8
+    { yes: 20, no: -10 }, // Q9
+    { yes: 5, no: -6 }, // Q10
   ];
 
   return {
