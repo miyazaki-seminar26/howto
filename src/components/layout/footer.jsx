@@ -1,6 +1,6 @@
 import { Anchor, Flex, Text } from '@mantine/core';
 
-import { PATHS } from '@/constants/link';
+import { PAGES } from '@/constants/link';
 
 import { GithubIcon } from '../icons/GithubIcon';
 import { InstagramIcon } from '../icons/InstagramIcon';
@@ -22,9 +22,9 @@ export const AppFooter = () => {
         </Anchor>
         <Anchor
           className="transition-opacity hover:opacity-80"
-          href={PATHS.GITHUB.path}
+          href={PAGES.GITHUB.path}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="nPAGESer noreferrer"
         >
           <GithubIcon />
         </Anchor>

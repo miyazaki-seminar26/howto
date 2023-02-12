@@ -4,7 +4,7 @@ export const BellText = ({ text }) => {
   return (
     <div>
       {/* ベルのアイコン */}
-      <div>BellText</div>
+      <div>BellICON</div>
 
       {/* ベルのテキスト */}
       <div>{text}</div>

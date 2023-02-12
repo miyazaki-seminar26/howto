@@ -2,25 +2,21 @@ import { Center, createStyles, Group, Image, Menu } from '@mantine/core';
 import { IconChevronDown } from '@tabler/icons-react';
 import Link from 'next/link';
 
+import { PAGES } from '@/constants/link';
+
 const links = [
   {
-    label: '基礎編',
+    label: 'SURVEY',
     links: [
-      { label: 'プロジェクト企画', link: '/basic/project-plan' },
-      { label: 'WEBサイト設計', link: '/basic/site-structure' },
-      { label: 'デザイン制作', link: '/basic/design' },
-      { label: '具体的な設定', link: '/basic/specific-setting' },
-      { label: '基本的な使い方', link: '/basic/basic-usage' },
+      { label: PAGES.HOME.name, link: PAGES.HOME.path },
+      { label: PAGES.SURVEY.name, link: PAGES.SURVEY.path },
     ],
   },
   {
-    label: '応用編',
+    label: 'RECOMMEND',
     links: [
-      { label: '実践1', link: '/advanced/practice1' },
-      { label: '実践2', link: '/advanced/practice2' },
-      { label: '実践3', link: '/advanced/practice3' },
-      { label: 'サイト運営', link: '/advanced/site-management' },
-      { label: 'インフラ整備', link: '/advanced/infra' },
+      { label: PAGES.NO_CODE.name, link: PAGES.NO_CODE.path },
+      { label: PAGES.OTHER.name, link: PAGES.OTHER.path },
     ],
   },
 ];
