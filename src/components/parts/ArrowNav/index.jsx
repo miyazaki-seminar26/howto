@@ -5,7 +5,7 @@ export const ArrowNav = ({ previousPage, nextPage }) => {
   // ページ遷移のナビゲーション
   // tailwindを使う
   return (
-    <div>
+    <div className="mt-5">
       <img src="/prefooter/line.svg" alt="line" />
       <Space h="xl" />
       <Flex

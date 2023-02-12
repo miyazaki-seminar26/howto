@@ -14,7 +14,7 @@ export const AppLayout = ({ children, pageName }) => {
       )}
 
       <main>
-        <Container mt={84} mx={{ md: 'auto', xs: 0 }}>
+        <Container mt={40} mx={{ md: 'auto', xs: 0 }}>
           {children}
         </Container>
       </main>

@@ -4,6 +4,10 @@ import { ArrowNav } from '@/components/parts/ArrowNav';
 import { PageHeader } from '@/components/parts/PageHeader';
 import { PAGES } from '@/constants/link';
 
+import { BellText } from '@/components/parts/BellText';
+
+import { CopilotIcon } from '@/components/icons/CopilotIcon';
+
 import { useSurvey } from './useSurvey';
 
 export const Survey = () => {
@@ -34,11 +38,12 @@ export const Survey = () => {
 
   return (
     <div>
+      <BellText text="あなたが作るべきものは本当にwebサイトですか？目的に合った手段を考えれていますか？あなたが本当に作るべきものは何なのか一緒に考えてみましょう！" />
       <PageHeader pageTitle={currentPage.name} />
       {questionList.map((question, index) => (
         <div className="my-10 flex justify-between" key={index}>
-          <div className="bg-blue-300">
-            {question.index}
+          <div>
+            Q.
             {question.text}
           </div>
           {state[question.name] ? (
@@ -65,7 +70,11 @@ export const Survey = () => {
         </div>
       ))}
 
-      <div>あなたの点数は{result}点です</div>
+      <div className="mx-32 flex items-center justify-center border px-5 py-7 font-bold shadow-md">
+        <CopilotIcon />
+        <div>あなたの点数は{result}点です</div>
+        <CopilotIcon />
+      </div>
 
       <ArrowNav previousPage={previousPage} />
     </div>
