@@ -31,7 +31,9 @@ export const BellText = ({ text }) => {
       </div>
 
       {/* ベルのテキスト */}
-      <div className="font-semibold text-gray-600/40">{text}</div>
+      <div className="text-xs font-semibold text-gray-600/40 sm:text-base">
+        {text}
+      </div>
     </div>
   );
 };

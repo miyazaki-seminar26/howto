@@ -50,7 +50,7 @@ export const Survey = () => {
         簡単なアンケートに答えてください！YESかNOのボタンを押すだけです。
       </div>
       {questionList.map((question, index) => (
-        <div className="my-10 flex justify-between" key={index}>
+        <div className="my-10 flex flex-col justify-between sm:flex-row" key={index}>
           <Text fz="sm" fw={700} className="m-5 flex">
             Q.
             {question.text}
@@ -107,7 +107,7 @@ export const Survey = () => {
         </div>
       ))}
 
-      <div className="mx-32 my-5 flex items-center justify-center border px-5 py-7 font-bold shadow-md">
+      <div className="my-5 flex items-center justify-center border px-5 py-7 font-bold shadow-md sm:mx-32">
         <CopilotIcon />
         <div>あなたの点数は{result}点です</div>
         <CopilotIcon />
