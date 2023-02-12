@@ -1,4 +1,4 @@
-import { useReducer } from 'react';
+import { useEffect, useReducer, useState } from 'react';
 
 import { ArrowNav } from '@/components/parts/ArrowNav';
 import { PageHeader } from '@/components/parts/PageHeader';
@@ -6,29 +6,31 @@ import { PAGES } from '@/constants/link';
 
 import { useSurvey } from './useSurvey';
 
-const questionList = [
-  { name: 'FIRST', text: 'あなたが落としたのは金の斧ですか？' },
-  { name: 'SECOND', text: 'あなたが落としたのは金の斧ですか？' },
-  { name: 'THIRD', text: 'あなたが落としたのは金の斧ですか？' },
-  { name: 'FOURTH', text: 'あなたが落としたのは金の斧ですか？' },
-  { name: 'FIFTH', text: 'あなたが落としたのは金の斧ですか？' },
-  { name: 'SIXTH', text: 'あなたが落としたのは金の斧ですか？' },
-  { name: 'SEVENTH', text: 'あなたが落としたのは金の斧ですか？' },
-  { name: 'EIGHTH', text: 'あなたが落としたのは金の斧ですか？' },
-  { name: 'NINTH', text: 'あなたが落としたのは金の斧ですか？' },
-  { name: 'TENTH', text: 'あなたが落としたのは金の斧ですか？' },
-];
 export const Survey = () => {
   // 一つ前、現在、一つ後のページを定義（PAGESはconstants/link.jsで定義）
   const currentPage = PAGES.SURVEY;
   const previousPage = PAGES.HOME;
 
-  const { reducer, initialState } = useSurvey();
+  const { reducer, initialState, questionList, scores } = useSurvey();
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const handleClick = num => {
     dispatch({ type: num });
   };
+  const [result, setResult] = useState(0);
+
+  useEffect(() => {
+    // objectであるstateのvalueを配列に変換
+    const stateArray = Object.values(state);
+    // stateArrayがtrueの場合、scoresのindexを取得し、その値をresultに加算
+    const temp = 0;
+    stateArray.forEach((value, index) => {
+      if (value) {
+        temp = temp + scores[index];
+      }
+    });
+    setResult(temp);
+  }, [state]);
 
   return (
     <div>
@@ -62,6 +64,8 @@ export const Survey = () => {
           )}
         </div>
       ))}
+
+      <div>あなたの点数は{result}点です</div>
 
       <ArrowNav previousPage={previousPage} />
     </div>
