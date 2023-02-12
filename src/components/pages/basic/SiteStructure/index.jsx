@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import Link from 'next/link';
 
-import { IconArrowNarrowRight } from '@tabler/icons-react';
+import { IconSquareArrowRight } from '@tabler/icons-react';
 
 import { ArrowNav } from '@/components/parts/ArrowNav';
 import { BellText } from '@/components/parts/BellText';
@@ -22,15 +22,15 @@ export const SiteStructure = () => {
       <button onClick={handleClick}>click</button>
       <div>クリック数{state}</div>
       <Link href="#">
-        <div className="flex items-center justify-center hover:text-blue-500">
-          <IconArrowNarrowRight size={40} strokeWidth={0.5} color={'black'} />
+        <div className="font-semibold flex items-center justify-center hover:text-blue-600 cursor-pointer transition-all duration-300 mb-2">
+          <IconSquareArrowRight size={40} strokeWidth={1} color={'black'} />
           x点以上の方はこちら
         </div>
       </Link>
       <Link href="#">
-        <div className="flex items-center justify-center hover:text-blue-500">
-          <IconArrowNarrowRight size={40} strokeWidth={0.5} color={'black'} />
-          x点以下の方はこちら
+        <div className="font-semibold flex items-center justify-center hover:text-blue-600 cursor-pointer transition-all duration-300">
+          <IconSquareArrowRight size={40} strokeWidth={1} color={'black'} />
+          x点以上の方はこちら
         </div>
       </Link>
       <ArrowNav previousPage={PAGES.HOME} nextPage={PAGES.HOME} />
