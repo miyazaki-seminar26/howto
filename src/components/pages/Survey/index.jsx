@@ -40,6 +40,9 @@ export const Survey = () => {
     <div>
       <BellText text="あなたが作るべきものは本当にwebサイトですか？目的に合った手段を考えれていますか？あなたが本当に作るべきものは何なのか一緒に考えてみましょう！" />
       <PageHeader pageTitle={currentPage.name} />
+      <div className="my-5 text-xs text-gray-600/70">
+        簡単なアンケートに答えてください！YESかNOのボタンを押すだけです。
+      </div>
       {questionList.map((question, index) => (
         <div className="my-10 flex justify-between" key={index}>
           <div>
