@@ -8,6 +8,8 @@ export const Home = () => {
     <div>
       <Title order={4} align="center">
         このWEBサイトでは何ができる？
+        <Space h="xl" />
+        <Space h="xl" />
       </Title>
       <Flex
         mih={50}
