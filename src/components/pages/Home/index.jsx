@@ -14,7 +14,7 @@ export const Home = () => {
         bg="rgba(0, 0, 0, 0)"
         gap="md"
         justify="center"
-        align="center"
+        align="flex-end"
         direction="row"
         wrap="wrap"
       >
