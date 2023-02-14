@@ -61,7 +61,7 @@ export const NoCode = () => {
         <Timeline color="pink" active={3} lineWidth={3} bulletSize={22}>
           <Timeline.Item
             bullet={<IconGitBranchDeleted size={12} />}
-            title={<LoadTitle title="企画" />}
+            title={<LoadTitle title="目に見えない部分" />}
           >
             <div className="my-5">
               <Text color="dimmed" size="md">
@@ -96,18 +96,41 @@ export const NoCode = () => {
           </Timeline.Item>
 
           {/* ここから */}
-          <Timeline.Item bullet={<IconGitCommit size={12} />} title="Commits">
-            <Text color="dimmed" size="sm">
-              You&apos;ve pushed 23 commits to
-              <Text variant="link" component="span" inherit>
-                <Link href="https://zenn.dev/pm_translate/articles/054e6e384062f4">
-                  プロダクトマネジメントの優先順位付けフレームワークの究極ガイド
-                </Link>
-              </Text>
+          <Timeline.Item
+            bullet={<IconGitCommit size={12} />}
+            title="目に見える部分"
+          >
+            <Text color="dimmed" size="md">
+              制作：ノーコードツールを活用
             </Text>
-            <Text size="xs" mt={4}>
-              52 minutes ago
+            <Text color="dimmed" size="md">
+              公開と運用：公開し改善と検証を繰り返す
             </Text>
+            <LoadLink title="ツール選びから">
+              <Link href="https://nocodedb.world/archives/15839">
+                Webサイト作成におすすめのノーコード開発ツール10選【NoCode DB】
+              </Link>
+            </LoadLink>
+            <LoadLink title="studio">
+              <Link href="https://zenn.dev/higashi10/articles/bf6e26b24872d0">
+                NoCodeでWebページ作成してみた (zenn.dev)
+              </Link>
+            </LoadLink>
+            <LoadLink title="アカウント作成">
+              <Link href="https://note.com/can_kids_banana/n/nd3d16fad935b?magazine_key=mbd854623ba42">
+                【ペライチ基礎】アカウント作成方法
+              </Link>
+            </LoadLink>
+            <LoadLink title="公開と運用">
+              <Link href="https://note.com/ad_creation/n/n18d051e08a53#NJS41">
+                誰でも簡単にホームページが作れるペライチ/公開編
+              </Link>
+            </LoadLink>
+            <LoadLink title="ITとは無縁なら">
+              <Link href="https://zenn.dev/meihei/articles/efb14509ddaebb">
+                IT とは無縁の小さなお店でホームページを運用する際に (zenn.dev)
+              </Link>
+            </LoadLink>
           </Timeline.Item>
 
           <Timeline.Item
