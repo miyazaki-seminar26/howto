@@ -22,6 +22,7 @@ export const Survey = () => {
   const previousPage = PAGES.HOME;
 
   const { reducer, initialState, questionList, scores } = useSurvey();
+
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const handleClick = num => {
