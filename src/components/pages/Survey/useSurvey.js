@@ -48,7 +48,7 @@ export const useSurvey = () => {
     EIGHTH: true,
     NINTH: true,
     TENTH: true,
-    ElEVENTH: true,
+    ELEVENTH: true,
     TWELFTH: true,
     THIRTEENTH: true,
     FOURTEENTH: true,
