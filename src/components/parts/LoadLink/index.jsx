@@ -4,8 +4,8 @@ import { IconArrowBigRightLines } from '@tabler/icons-react';
 export const LoadLink = ({ title, children }) => {
   return (
     <div className="my-5 flex  flex-col text-sm sm:flex-row">
-      <div className="w-1/5">{title}</div>
-      <div className="flex">
+      <div className="mb-3 sm:mb-0 sm:w-1/5">{title}</div>
+      <div className="flex items-center">
         <IconArrowBigRightLines
           size={30}
           strokeWidth={2}

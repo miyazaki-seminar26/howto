@@ -54,7 +54,7 @@ export const NoCode = () => {
       </div>
 
       <div className="text-center font-mono text-3xl font-bold">
-        Your Load Map
+        〜Your Load Map〜
       </div>
 
       <div className="my-10 flex justify-center">
@@ -64,19 +64,17 @@ export const NoCode = () => {
             title={<LoadTitle title="企画" />}
           >
             <div className="my-5">
-              <Text color="dimmed" size="md">
+              <Text color="dimmed" className="text-sm sm:text-base">
                 企画：課題発見、ゴール・ターゲット・コンセプトの決定
               </Text>
-              <Text color="dimmed" size="md">
+              <Text color="dimmed" className="text-base sm:text-base">
                 設計：サイト・ページ構造の設計
               </Text>
             </div>
             <LoadLink title="企画〜設計">
-              <div>
-                <Link href="https://zenn.dev/pm_translate/articles/054e6e384062f4">
-                  プロダクトマネジメントの優先順位付けフレームワークの究極ガイド
-                </Link>
-              </div>
+              <Link href="https://zenn.dev/pm_translate/articles/054e6e384062f4">
+                プロダクトマネジメントの優先順位付けフレームワークの究極ガイド
+              </Link>
             </LoadLink>
             <LoadLink title="企画段階">
               <Link href="https://speakerdeck.com/tumada/liang-ike-ti-woxuan-bu-jia-zhi-hake-ti-dejue-maru">
