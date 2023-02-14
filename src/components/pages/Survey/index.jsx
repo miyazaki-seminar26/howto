@@ -118,7 +118,7 @@ export const Survey = () => {
       </div>
 
       <div className="md:mx-48">
-        <Link href="/recommend/nocode">
+        <Link href="/recommend/no-code">
           <div className="mb-2 flex cursor-pointer items-center justify-center font-semibold transition-all duration-300 hover:text-blue-600">
             <IconSquareArrowRight size={40} strokeWidth={1} color={'black'} />
             0点<span className="text-blue-600">以上</span>の方はこちら
