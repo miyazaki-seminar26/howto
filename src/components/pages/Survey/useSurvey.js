@@ -30,8 +30,6 @@ export const useSurvey = () => {
         return { ...state, THIRTEENTH: !state.THIRTEENTH };
       case 'FOURTEENTH':
         return { ...state, FOURTEENTH: !state.FOURTEENTH };
-      case 'FIFTEENTH':
-        return { ...state, FIFTEENTH: !state.FIFTEENTH };
 
       default:
         return state;
@@ -54,45 +52,66 @@ export const useSurvey = () => {
     TWELFTH: true,
     THIRTEENTH: true,
     FOURTEENTH: true,
-    FIFTEENTH: true,
   };
 
   // ①問題文の設定
   const questionList = [
-    { name: 'FIRST', text: 'あなたはコードを書きたいですか？' },
-    { name: 'SECOND', text: 'あなたが落としたのは金の斧ですか？' },
-    { name: 'THIRD', text: 'あなたが落としたのは金の斧ですか？' },
-    { name: 'FOURTH', text: 'あなたが落としたのは金の斧ですか？' },
-    { name: 'FIFTH', text: 'あなたが落としたのは金の斧ですか？' },
-    { name: 'SIXTH', text: 'あなたが落としたのは金の斧ですか？' },
-    { name: 'SEVENTH', text: 'あなたが落としたのは金の斧ですか？' },
-    { name: 'EIGHTH', text: 'あなたが落としたのは金の斧ですか？' },
-    { name: 'NINTH', text: 'あなたが落としたのは金の斧ですか？' },
-    { name: 'TENTH', text: 'あなたが落としたのは金の斧ですか？' },
-    { name: 'ELEVENTH', text: 'あなたが落としたのは金の斧ですか？' },
-    { name: 'TWELFTH', text: 'あなたが落としたのは金の斧ですか？' },
-    { name: 'THIRTEENTH', text: 'あなたが落としたのは金の斧ですか？' },
-    { name: 'FOURTEENTH', text: 'あなたが落としたのは金の斧ですか？' },
-    { name: 'FIFTEENTH', text: 'あなたが落としたのは金の斧ですか？' },
+    { name: 'FIRST', text: 'あなたはコードを書きたい' },
+    { name: 'SECOND', text: '今すぐ簡単に情報を発信したい' },
+    {
+      name: 'THIRD',
+      text: '今作ろうとしているwebサイト以外で既に情報発信をしている',
+    },
+    {
+      name: 'FOURTH',
+      text: '情報発信するうえで大切にしたいのはアクセス数を増やすことである',
+    },
+    {
+      name: 'FIFTH',
+      text: '情報発信をするうえで大切にしたいのは複数の発信経路をどこかにまとめておくことである',
+    },
+    { name: 'SIXTH', text: '作るwebサイトは友人・趣味仲間に見てもらいたい' },
+    { name: 'SEVENTH', text: '作るwebサイトは自分の仕事に関わるものである' },
+    {
+      name: 'EIGHTH',
+      text: '常に最新の情報を発信し続けることだけに注力したい',
+    },
+    {
+      name: 'NINTH',
+      text: '以前の考えやアイデアも蓄積し伝え続けることが重要である',
+    },
+    { name: 'TENTH', text: 'webサイトで商品を販売したい' },
+    {
+      name: 'ELEVENTH',
+      text: 'webサイトで自身の理念や提供するサービスを紹介したい',
+    },
+    {
+      name: 'TWELFTH',
+      text: 'webサイトでサービスの予約や問い合わせを行いたい',
+    },
+    { name: 'THIRTEENTH', text: 'webサイトの型は既に決まっている' },
+    {
+      name: 'FOURTEENTH',
+      text: 'あなたのwebサイトやそのアイデアは類を見ない非常に独創的なものである',
+    },
   ];
 
   // ②問題ごとのスコアの設定
   const scores = [
     { yes: 300, no: 0 }, // Q1
-    { yes: 5, no: -6 }, // Q2
-    { yes: -10, no: 4 }, // Q3
-    { yes: 5, no: -6 }, // Q4
-    { yes: 15, no: -6 }, // Q5
-    { yes: 5, no: -1 }, // Q6
-    { yes: 18, no: -6 }, // Q7
-    { yes: 5, no: -6 }, // Q8
-    { yes: 20, no: -10 }, // Q9
-    { yes: 5, no: -6 }, // Q10
-    { yes: 5, no: -6 }, // Q11
-    { yes: 5, no: -6 }, // Q12
-    { yes: 5, no: -6 }, // Q13
-    { yes: 5, no: -6 }, // Q14
-    { yes: 5, no: -6 }, // Q15
+    { yes: -15, no: 5 }, // Q2
+    { yes: 5, no: -20 }, // Q3
+    { yes: -5, no: +5 }, // Q4
+    { yes: 15, no: -20 }, // Q5
+    { yes: -5, no: 5 }, // Q6
+    { yes: 5, no: -5 }, // Q7
+    { yes: -40, no: 0 }, // Q8
+    { yes: 15, no: -5 }, // Q9
+    { yes: 5, no: 0 }, // Q10
+    { yes: 5, no: 0 }, // Q11
+    { yes: -5, no: 0 }, // Q12
+    { yes: 15, no: -5 }, // Q13
+    { yes: 20, no: -5 }, // Q14
   ];
 
   return {
