@@ -98,10 +98,10 @@ export const NoCode = () => {
             bullet={<IconGitCommit size={12} />}
             title="目に見える部分"
           >
-            <Text color="dimmed" size="md">
+            <Text color="dimmed" className="text-sm sm:text-base">
               制作：ノーコードツールを活用
             </Text>
-            <Text color="dimmed" size="md">
+            <Text color="dimmed" className="text-sm sm:text-base">
               公開と運用：公開し改善と検証を繰り返す
             </Text>
             <LoadLink title="ツール選びから">
