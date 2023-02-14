@@ -22,7 +22,7 @@ export const ArrowNav = ({ previousPage, nextPage }) => {
             <Link href={previousPage.path}>
               <img
                 src="/prefooter/left.svg"
-                alt="前のページに戻るよ"
+                alt="前のページに戻る"
                 width="40"
                 height="40"
               />
@@ -32,7 +32,7 @@ export const ArrowNav = ({ previousPage, nextPage }) => {
         <Space w="xl" />
         <img
           src="/prefooter/house.svg"
-          alt="このページのことだよ"
+          alt="現在のページ"
           width="40"
           height="40"
         />
@@ -42,7 +42,7 @@ export const ArrowNav = ({ previousPage, nextPage }) => {
             <Link href={nextPage.path}>
               <img
                 src="/prefooter/right.svg"
-                alt="次のページに移動するよ"
+                alt="次のページに移動"
                 width="40"
                 height="40"
               />
