@@ -20,9 +20,9 @@ export const Home = () => {
         direction="row"
         wrap="wrap"
       >
-        <img src="/top/picture1.svg" />
-        <img src="/top/picture2.svg" />
-        <img src="/top/picture3.svg" />
+        <img src="/top/picture1.svg" alt="自分の「目的」が見える" />
+        <img src="/top/picture2.svg" alt="最適化される" />
+        <img src="/top/picture3.svg" alt="自分の「手段」が分かる" />
       </Flex>
       <Space h="xl" />
       <Flex
@@ -34,7 +34,7 @@ export const Home = () => {
         direction="row"
         wrap="wrap"
       >
-        <img src="/top/line1.svg" />
+        <img src="/top/line1.svg" alt="ピンクのライン" />
         <Center className="w-48 sm:w-96">
           <Text fz="xs" c="dimmed" ta="left">
             WEBサイトを作るときに完成までの8割の時間をかけると言われている場所は目に見えない部分、
@@ -54,7 +54,7 @@ export const Home = () => {
         direction="row"
         wrap="wrap"
       >
-        <img src="/top/line2.svg" />
+        <img src="/top/line2.svg" alt="青のライン" />
         <Center className="w-48 sm:w-96">
           <Text fz="xs" c="dimmed" ta="left">
             WEBサイトを作るときに完成までの残りの2割は見える部分、つまりこの先からプログラムを書いて行きます。
