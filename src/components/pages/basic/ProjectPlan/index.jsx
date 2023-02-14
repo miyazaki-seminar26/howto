@@ -22,10 +22,10 @@ export const ProjectPlan = () => {
             wrap="wrap"
           >
             <button>
-              <img src="/yesorno/yes1.svg" alt="" width="50" height="50" />
+              <img src="/yesorno/yes1.svg" alt="YES" width="50" height="50" />
             </button>
             <button>
-              <img src="/yesorno/no2.svg" alt="" width="85" height="85" />
+              <img src="/yesorno/no2.svg" alt="NO" width="85" height="85" />
             </button>
           </Flex>
         </div>
@@ -46,10 +46,10 @@ export const ProjectPlan = () => {
             wrap="wrap"
           >
             <button>
-              <img src="/yesorno/yes2.svg" alt="" width="50" height="50" />
+              <img src="/yesorno/yes2.svg" alt="YES" width="50" height="50" />
             </button>
             <button>
-              <img src="/yesorno/no1.svg" alt="" width="85" height="85" />
+              <img src="/yesorno/no1.svg" alt="NO" width="85" height="85" />
             </button>
           </Flex>
         </div>
