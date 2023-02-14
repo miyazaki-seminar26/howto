@@ -12,12 +12,18 @@ export const AppFooter = () => {
       <Flex gap={24}>
         <Anchor
           className="transition-opacity hover:opacity-80"
+          href={PAGES.INSTAGRAM.path}
           target="_blank"
           rel="noopener noreferrer"
         >
           <InstagramIcon />
         </Anchor>
-        <Anchor className="transition-opacity hover:opacity-80">
+        <Anchor
+          className="transition-opacity hover:opacity-80"
+          href={PAGES.TWITTER.path}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <TwitterIcon />
         </Anchor>
         <Anchor
