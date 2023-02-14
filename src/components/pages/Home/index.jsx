@@ -2,6 +2,8 @@ import { Center, Flex, Space, Text, Title } from '@mantine/core';
 
 import { ArrowNav } from '@/components/parts/ArrowNav';
 import { PAGES } from '@/constants/link';
+import { IconChevronRight } from '@tabler/icons-react';
+import Link from 'next/link';
 
 export const Home = () => {
   return (
@@ -41,9 +43,16 @@ export const Home = () => {
             つまりプログラムを書いていない時間なのです。
             <br></br>
             まだ自分の「作りたい」がぼやけているならここから一緒に見つけにいきましょう！
+       <Link href="#">
+            <div className="flex justify-start items-center font-bold  text-neutral-800 mt-2 cursor-pointer hover:text-blue-600 duration-300 mr-64">
+              <IconChevronRight
+            size={20} strokeWidth={2} color={'#000000'} className="mr-2 mb-1 flex items-center justify-center  "/>テストを受ける</div>
+       </Link>
           </Text>
+          
           <div></div>
         </Center>
+            
       </Flex>
       <Flex
         mih={50}
