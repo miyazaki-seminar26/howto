@@ -1,7 +1,6 @@
 import '@/styles/mantineBase.css';
 import '@/styles/tailwind.css';
 import { MantineProvider } from '@mantine/core';
-import React from 'react';
 
 const App = ({ Component, pageProps }) => (
   <MantineProvider
