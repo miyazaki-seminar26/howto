@@ -117,18 +117,23 @@ export const Survey = () => {
         <CopilotIcon />
       </div>
 
-      <Link href="#">
-        <div className="mb-2 flex cursor-pointer items-center justify-center font-semibold transition-all duration-300 hover:text-blue-600">
-          <IconSquareArrowRight size={40} strokeWidth={1} color={'black'} />
-          x点以上の方はこちら
+      <div className="md:mx-48">
+        <Link href="/recommend/nocode">
+          <div className="mb-2 flex cursor-pointer items-center justify-center font-semibold transition-all duration-300 hover:text-blue-600">
+            <IconSquareArrowRight size={40} strokeWidth={1} color={'black'} />
+            0点<span className="text-blue-600">以上</span>の方はこちら
+          </div>
+        </Link>
+        <Link href="/recommend/other">
+          <div className="flex cursor-pointer items-center justify-center font-semibold transition-all duration-300 hover:text-blue-600">
+            <IconSquareArrowRight size={40} strokeWidth={1} color={'black'} />
+            0点<span className="text-red-600">未満</span>の方はこちら
+          </div>
+        </Link>
+        <div className="my-5 text-center text-xs text-gray-600/70">
+          0点付近の方は、どちらもチェックしてみてください。
         </div>
-      </Link>
-      <Link href="#">
-        <div className="flex cursor-pointer items-center justify-center font-semibold transition-all duration-300 hover:text-blue-600">
-          <IconSquareArrowRight size={40} strokeWidth={1} color={'black'} />
-          x点以上の方はこちら
-        </div>
-      </Link>
+      </div>
 
       <ArrowNav previousPage={previousPage} />
     </div>
