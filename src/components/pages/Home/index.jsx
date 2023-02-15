@@ -1,5 +1,7 @@
 import { Flex, Space, Title } from '@mantine/core';
 
+import Link from 'next/link';
+
 import { CopilotIcon } from '@/components/icons/CopilotIcon';
 import { ArrowNav } from '@/components/parts/ArrowNav';
 import { PAGES } from '@/constants/link';
@@ -80,7 +82,7 @@ export const Home = () => {
         悪いこと言わん、とりあえず診断受けよ。
       </div>
       <div className="text-center">
-        <a
+        <Link
           href="/survey"
           className="group relative overflow-hidden rounded-lg border border-gray-100 bg-gray-100 px-5 py-3 font-medium text-gray-600 shadow-inner"
         >
@@ -92,7 +94,7 @@ export const Home = () => {
           <span className="ease relative transition-colors delay-200 duration-300 group-hover:text-white">
             今すぐ診断する→
           </span>
-        </a>
+        </Link>
       </div>
       <ArrowNav nextPage={PAGES.SURVEY} />
     </div>
