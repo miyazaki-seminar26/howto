@@ -51,8 +51,8 @@ export const NoCode = () => {
               なぜノーコードなのか
             </div>
             <div className="pl-5 text-base text-stone-500">
-              私たちが普段よく閲覧するようなWebサイトでHTML,CSSのみで書かれているものはほとんどないといえるでしょう。
-              なぜなら表現が限られてしまうからです。HTML,CSSをベースに他の言語と組み合わせて作ることが一般的です。あなたにとって、これらすべてを学習してからWebサイトを制作するのは非効率的といえます。
+              私たちが普段よく閲覧するようなWebサイトでHTML,CSSのみで書かれているものは少ないです。
+              なぜなら、HTMLやCSSは仕様上、保守性や拡張性に問題があるためです。HTML、CSSの難点を補った技術で開発をする方が、安全且つ効率的です。しかしながら、これらの技術を習得することは難易度が高く、時間がかかります。そこで、ノーコードでWebサイトを制作することで、コストを抑え、開発期間を短縮することができます。
               <br />
               あなた＝主婦だとします。ディナーを作る時にご飯を稲から育て、鶏を育てチキンにするのと同じことです。スーパーで育てられたお米を買い、捌かれた鶏肉を買い、家で簡単に調理するほうが、簡単で、且つ美味しい料理が作れるに違いないです。
             </div>
@@ -139,20 +139,10 @@ export const NoCode = () => {
           </Timeline.Item>
 
           <Timeline.Item
-            title="Pull request"
+            title="Let's try!"
             bullet={<IconGitPullRequest size={12} />}
             lineVariant="dashed"
-          >
-            <Text color="dimmed" size="sm">
-              You&apos;ve submitted a pull request
-              <Text variant="link" component="span" inherit>
-                Fix incorrect notification message (#187)
-              </Text>
-            </Text>
-            <Text size="xs" mt={4}>
-              34 minutes ago
-            </Text>
-          </Timeline.Item>
+          ></Timeline.Item>
           {/* ここまで */}
         </Timeline>
       </div>
