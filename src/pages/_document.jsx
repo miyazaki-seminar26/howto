@@ -9,11 +9,14 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="ja">
-        <title>Howto</title>
+        <title>Recaim -Webサイト制作診断-</title>
         <Head>
-          <meta property="og:title" content="How to Web-26th" />
+          <meta property="og:title" content="Recaim -Webサイト制作診断-" />
           <meta property="og:image" content="/favicons/favicon-16x16.png" />
-          <meta property="og:description" content="How-toのサイトです。" />
+          <meta
+            property="og:description"
+            content="Webサイト制作という響きだけでWebサイトを作ろうとしているそこの君へ。Webサイト制作があなたにとってどうあるべきか。本当にWebサイトを作るべきなのか。それらを簡単に診断できるサイトRecaimです。あなたの目的にあった最適な行動を取りましょう。"
+          />
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="theme-color" content="#ffffff" />
           <link
